@@ -1,4 +1,4 @@
-import Header from "./components/Header"
+import { Chart, Header } from "./components"
 
 function App() {
 
