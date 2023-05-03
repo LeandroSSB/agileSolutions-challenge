@@ -12,7 +12,8 @@ const marcaContext = createContext([])
 export const MarcaProvider = ({ children }) => {
   // populate marcas
   const [ marca, setMarca ] = useState(() => {
-    const local = JSON.parse(localStorage.getItem("@agile:marca")) || [{ name: "marca1", produto: "produto1", data:dataFactory()}, { name: "marca2", produto: "produto2", data:dataFactory()}, { name: "marca3", produto: "produto3", data:dataFactory()}];;
+    const local = JSON.parse(localStorage.getItem("@agile:marca")) || [{ name: "marca1", produto: "produto1", data:dataFactory()}, { name: "marca2", produto: "produto2", data:dataFactory()}, { name: "marca3", produto: "produto3", data:dataFactory()},
+   { name: "marca21", produto: "produto1", data:dataFactory()}];
     return local
   })
 

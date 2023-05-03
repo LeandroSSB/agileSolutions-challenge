@@ -14,15 +14,18 @@ const Reports = () => {
     return produto.filter(a => a.category === selectCategory)[0]
   })
   const [selectMarca, setSelectMarca] = useState(() => {
-    return marca.filter(a => a.produto === selectProduto.name)[0]
+    return marca.filter(a => a.produto === selectProduto.name)[0].name
   })
 
 
   useEffect(()=> {
     setSelectProduto(produto.filter(a => a.category === selectCategory)[0])
-    setSelectMarca(marca.filter(a => a.produto === selectProduto.name)[0])
-  }, [selectCategory, selectProduto,selectMarca ])
+    setSelectMarca(marca.filter(a => a.produto === selectProduto.name)[0].name)
+  }, [selectCategory])
 
+  useEffect(()=> {
+    setSelectMarca(marca.filter(a => a.produto === selectProduto.name)[0].name)
+  }, [selectProduto])
 
   return (
     <>
@@ -51,7 +54,7 @@ const Reports = () => {
 
     </Container>
 
-      <Chart  data={selectMarca.data}/>
+      <Chart  data={marca.find(a => a.name == selectMarca).data}/>
     </>
   )
 }
