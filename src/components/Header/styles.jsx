@@ -4,7 +4,7 @@ export const Container = styled.div`
   display: flex;
   width: 100vw;
   height: 5vh;
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   flex-flow: row nowrap;
   background-color: #4294db;

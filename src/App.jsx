@@ -1,10 +1,12 @@
-import Header from "./components/Header"
+import {  Header } from "./components"
+import { Reports } from "./pages"
 
 function App() {
 
   return (
     <>
       <Header/>
+      <Reports />
     </>
   )
 }
